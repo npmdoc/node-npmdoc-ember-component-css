@@ -1,0 +1,1025 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/ebryn/ember-component-css#readme">ember-component-css (v0.3.2)</a>
+</h1>
+<h4>An Ember CLI addon which allows you to specify styles for individual components</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-component-css">module ember-component-css</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._getClassicStyleFunnel">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_getClassicStyleFunnel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._getPodStyleFunnel">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_getPodStyleFunnel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._getStyleFunnel">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_getStyleFunnel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._isAddon">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_isAddon
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._namespacingIsEnabled">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_namespacingIsEnabled
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._podDirectory">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_podDirectory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css._projectRoot">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>_projectRoot
+            <span class="apidocSignatureSpan">(trees)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.config">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>config
+            <span class="apidocSignatureSpan">(enviroment)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.included">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>included
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.pod_style">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>pod_style
+            <span class="apidocSignatureSpan">(inputTree, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.processComponentStyles">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>processComponentStyles
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.treeForAddon">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>treeForAddon
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.treeForParentAddonStyles">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>treeForParentAddonStyles
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.treeForStyles">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>treeForStyles
+            <span class="apidocSignatureSpan">(tree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-component-css.</span>_allPodStyles</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-component-css.</span>component_names</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-component-css.</span>pod_style.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-component-css.</span>preprocess_class_names</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-component-css.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-component-css.component_names">module ember-component-css.component_names</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.component_names.class">
+            function <span class="apidocSignatureSpan">ember-component-css.component_names.</span>class
+            <span class="apidocSignatureSpan">(modifiedPath, classicStyleDir, terseClassNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.component_names.path">
+            function <span class="apidocSignatureSpan">ember-component-css.component_names.</span>path
+            <span class="apidocSignatureSpan">(actualPath, classicStyleDir)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-component-css.pod_style">module ember-component-css.pod_style</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.pod_style.pod_style">
+            function <span class="apidocSignatureSpan">ember-component-css.</span>pod_style
+            <span class="apidocSignatureSpan">(inputTree, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-component-css.pod_style.prototype">module ember-component-css.pod_style.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.pod_style.prototype.constructor">
+            function <span class="apidocSignatureSpan">ember-component-css.pod_style.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(inputTree, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.pod_style.prototype.processString">
+            function <span class="apidocSignatureSpan">ember-component-css.pod_style.prototype.</span>processString
+            <span class="apidocSignatureSpan">(contents, stylePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-component-css.preprocess_class_names">module ember-component-css.preprocess_class_names</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.preprocess_class_names.default">
+            function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>default
+            <span class="apidocSignatureSpan">(contents, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.preprocess_class_names.indentation">
+            function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>indentation
+            <span class="apidocSignatureSpan">(contents, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.preprocess_class_names.syntax">
+            function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>syntax
+            <span class="apidocSignatureSpan">(contents, className, extension)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-component-css.preprocess_class_names.wrap">
+            function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>wrap
+            <span class="apidocSignatureSpan">(contents, className)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-component-css" id="apidoc.module.ember-component-css">module ember-component-css</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._getClassicStyleFunnel" id="apidoc.element.ember-component-css._getClassicStyleFunnel">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_getClassicStyleFunnel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getClassicStyleFunnel = function () {
+  return new Funnel(this.projectRoot, {
+    include: ['styles/' + this.classicStyleDir + '/**/*.{' + this.allowedStyleExtensions + ',}'],
+    allowEmpty: true,
+    annotation: 'Funnel (ember-component-css grab classic files)'
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ProcessStyles = require('./lib/pod-style.js');
+var ExtractNames = require('./lib/pod-names.js');
+var StyleManifest = require('broccoli-style-manifest');
+
+module.exports = {
+
+_getStyleFunnel: function() {
+  return new Merge([this._getPodStyleFunnel(), this.<span class="apidocCodeKeywordSpan">_getClassicStyleFunnel</span>()], {
+    annotation: 'Merge (ember-component-css merge pod and classic styles)'
+  });
+},
+
+_getPodStyleFunnel: function() {
+  return new Funnel(this.projectRoot, {
+    srcDir: this._podDirectory(),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._getPodStyleFunnel" id="apidoc.element.ember-component-css._getPodStyleFunnel">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_getPodStyleFunnel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getPodStyleFunnel = function () {
+  return new Funnel(this.projectRoot, {
+    srcDir: this._podDirectory(),
+    exclude: ['styles/**/*'],
+    include: ['**/*.{' + this.allowedStyleExtensions + ',}'],
+    allowEmpty: true,
+    annotation: 'Funnel (ember-component-css grab files)'
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ProcessStyles = require('./lib/pod-style.js');
+var ExtractNames = require('./lib/pod-names.js');
+var StyleManifest = require('broccoli-style-manifest');
+
+module.exports = {
+
+_getStyleFunnel: function() {
+  return new Merge([this.<span class="apidocCodeKeywordSpan">_getPodStyleFunnel</span>(), this._getClassicStyleFunnel()], {
+    annotation: 'Merge (ember-component-css merge pod and classic styles)'
+  });
+},
+
+_getPodStyleFunnel: function() {
+  return new Funnel(this.projectRoot, {
+    srcDir: this._podDirectory(),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._getStyleFunnel" id="apidoc.element.ember-component-css._getStyleFunnel">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_getStyleFunnel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getStyleFunnel = function () {
+  return new Merge([this._getPodStyleFunnel(), this._getClassicStyleFunnel()], {
+    annotation: 'Merge (ember-component-css merge pod and classic styles)'
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!this._isAddon()) {
+  tree = this.processComponentStyles(tree);
+}
+return this._super.treeForStyles.call(this, tree);
+  },
+
+  processComponentStyles: function(tree) {
+var podStyles = this.<span class="apidocCodeKeywordSpan">_getStyleFunnel</span>();
+this._allPodStyles.push(podStyles);
+
+if (this._namespacingIsEnabled()) {
+  podStyles = new ProcessStyles(podStyles, {
+    extensions: this.allowedStyleExtensions,
+    classicStyleDir: this.classicStyleDir,
+    terseClassNames: this.terseClassNames,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._isAddon" id="apidoc.element.ember-component-css._isAddon">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_isAddon
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_isAddon = function () {
+  return Boolean(this.parent.parent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    include: ['styles/' + this.classicStyleDir + '/**/*.{' + this.allowedStyleExtensions + ',}'],
+    allowEmpty: true,
+    annotation: 'Funnel (ember-component-css grab classic files)'
+  });
+},
+
+_podDirectory: function() {
+  return this.appConfig.podModulePrefix &amp;&amp; !this.<span class="apidocCodeKeywordSpan">_isAddon</span>() ? this.appConfig
+.podModulePrefix.replace(this.appConfig.modulePrefix, '') : '';
+},
+
+_namespacingIsEnabled: function() {
+  return this.addonConfig.namespacing !== false;
+},
+
+_isAddon: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._namespacingIsEnabled" id="apidoc.element.ember-component-css._namespacingIsEnabled">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_namespacingIsEnabled
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_namespacingIsEnabled = function () {
+  return this.addonConfig.namespacing !== false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (enviroment === 'production') {
+config["ember-component-css"].terseClassNames = true;
+    }
+    return config;
+  },
+
+  treeForAddon: function(tree) {
+    if (this.<span class="apidocCodeKeywordSpan">_namespacingIsEnabled</span>()) {
+var allPodStyles = new Merge(this._allPodStyles, {
+  overwrite: true, // there are times (specifically with ember engines) where we run over the tree for twice. Should revist and
+find a way to prevent that in the future.
+  annotation: 'Merge (ember-component-css merge all process styles for a complete list of styles)'
+});
+
+var podNames = new ExtractNames(allPodStyles, {
+  classicStyleDir: this.classicStyleDir,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._podDirectory" id="apidoc.element.ember-component-css._podDirectory">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_podDirectory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_podDirectory = function () {
+  return this.appConfig.podModulePrefix &amp;&amp; !this._isAddon() ? this.appConfig.podModulePrefix.replace(this.appConfig.modulePrefix
+, '') : '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Merge([this._getPodStyleFunnel(), this._getClassicStyleFunnel()], {
+    annotation: 'Merge (ember-component-css merge pod and classic styles)'
+  });
+},
+
+_getPodStyleFunnel: function() {
+  return new Funnel(this.projectRoot, {
+    srcDir: this.<span class="apidocCodeKeywordSpan">_podDirectory</span>(),
+    exclude: ['styles/**/*'],
+    include: ['**/*.{' + this.allowedStyleExtensions + ',}'],
+    allowEmpty: true,
+    annotation: 'Funnel (ember-component-css grab files)'
+  });
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css._projectRoot" id="apidoc.element.ember-component-css._projectRoot">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>_projectRoot
+        <span class="apidocSignatureSpan">(trees)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_projectRoot = function (trees) {
+  var projectRoot;
+  if (this._isAddon()) {
+    projectRoot = this.parent.root + '/addon';
+  } else if (trees &amp;&amp; trees.app) {
+    projectRoot = trees.app;
+  } else {
+    projectRoot = this.parent.root + '/app';
+  }
+
+  return projectRoot;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return projectRoot;
+  },
+
+  included: function(app) {
+this._super.included.apply(this, arguments);
+
+this.projectRoot = this.<span class="apidocCodeKeywordSpan">_projectRoot</span>(app.trees);
+
+if (this._isAddon()) {
+  this.parent.treeForMethods['addon-styles'] = 'treeForParentAddonStyles';
+  this.parent.treeForParentAddonStyles = this.treeForParentAddonStyles.bind(this);
+}
+
+this.appConfig = app.project.config(app.env);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.config" id="apidoc.element.ember-component-css.config">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>config
+        <span class="apidocSignatureSpan">(enviroment)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">config = function (enviroment) {
+  var config = {
+    "ember-component-css": {
+      terseClassNames: false,
+    },
+  };
+  if (enviroment === 'production') {
+    config["ember-component-css"].terseClassNames = true;
+  }
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.projectRoot = this._projectRoot(app.trees);
+
+  if (this._isAddon()) {
+    this.parent.treeForMethods['addon-styles'] = 'treeForParentAddonStyles';
+    this.parent.treeForParentAddonStyles = this.treeForParentAddonStyles.bind(this);
+  }
+
+  this.appConfig = app.project.<span class="apidocCodeKeywordSpan">config</span>(app.env);
+  this.addonConfig = this.appConfig['ember-component-css'] || {};
+  this.classicStyleDir = this.addonConfig.classicStyleDir || 'component-styles';
+  this.terseClassNames = Boolean(this.addonConfig.terseClassNames);
+  this.allowedStyleExtensions = app.registry.extensionsForType('css').filter(Boolean);
+},
+
+config: function(enviroment) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.included" id="apidoc.element.ember-component-css.included">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>included
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included = function (app) {
+  this._super.included.apply(this, arguments);
+
+  this.projectRoot = this._projectRoot(app.trees);
+
+  if (this._isAddon()) {
+    this.parent.treeForMethods['addon-styles'] = 'treeForParentAddonStyles';
+    this.parent.treeForParentAddonStyles = this.treeForParentAddonStyles.bind(this);
+  }
+
+  this.appConfig = app.project.config(app.env);
+  this.addonConfig = this.appConfig['ember-component-css'] || {};
+  this.classicStyleDir = this.addonConfig.classicStyleDir || 'component-styles';
+  this.terseClassNames = Boolean(this.addonConfig.terseClassNames);
+  this.allowedStyleExtensions = app.registry.extensionsForType('css').filter(Boolean);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.pod_style" id="apidoc.element.ember-component-css.pod_style">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>pod_style
+        <span class="apidocSignatureSpan">(inputTree, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PodStyles(inputTree, options) {
+  options = options || {};
+  Filter.call(this, inputTree, {
+    annotation: options.annotation
+  });
+  this.extensions = options.extensions;
+  this.classicStyleDir = options.classicStyleDir;
+  this.terseClassNames = options.terseClassNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.processComponentStyles" id="apidoc.element.ember-component-css.processComponentStyles">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>processComponentStyles
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processComponentStyles = function (tree) {
+  var podStyles = this._getStyleFunnel();
+  this._allPodStyles.push(podStyles);
+
+  if (this._namespacingIsEnabled()) {
+    podStyles = new ProcessStyles(podStyles, {
+      extensions: this.allowedStyleExtensions,
+      classicStyleDir: this.classicStyleDir,
+      terseClassNames: this.terseClassNames,
+      annotation: 'Filter (ember-component-css process :--component with class names)'
+    });
+  }
+
+  var styleManifest = new StyleManifest(podStyles, {
+    outputFileNameWithoutExtension: 'pod-styles',
+    annotation: 'StyleManifest (ember-component-css combining all style files that there are extensions for)'
+  });
+
+  tree = new Merge([podStyles, styleManifest, tree].filter(Boolean), {
+    annotation: 'Merge (ember-component-css merge namespacedStyles with style manafest)'
+  });
+
+  return tree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+  }
+
+  return this._super.treeForAddon.call(this, tree);
+},
+
+treeForParentAddonStyles: function(tree) {
+  return this.<span class="apidocCodeKeywordSpan">processComponentStyles</span>(tree);
+},
+
+treeForStyles: function(tree) {
+  if (!this._isAddon()) {
+    tree = this.processComponentStyles(tree);
+  }
+  return this._super.treeForStyles.call(this, tree);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.treeForAddon" id="apidoc.element.ember-component-css.treeForAddon">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>treeForAddon
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForAddon = function (tree) {
+  if (this._namespacingIsEnabled()) {
+    var allPodStyles = new Merge(this._allPodStyles, {
+      overwrite: true, // there are times (specifically with ember engines) where we run over the tree for twice. Should revist
+and find a way to prevent that in the future.
+      annotation: 'Merge (ember-component-css merge all process styles for a complete list of styles)'
+    });
+
+    var podNames = new ExtractNames(allPodStyles, {
+      classicStyleDir: this.classicStyleDir,
+      terseClassNames: this.terseClassNames,
+      annotation: 'Walk (ember-component-css extract class names from style paths)'
+    });
+
+    tree = new Merge([tree, podNames], {
+      overwrite: true,
+      annotation: 'Merge (ember-component-css merge names with addon tree)'
+    });
+  }
+
+  return this._super.treeForAddon.call(this, tree);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.treeForParentAddonStyles" id="apidoc.element.ember-component-css.treeForParentAddonStyles">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>treeForParentAddonStyles
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForParentAddonStyles = function (tree) {
+  return this.processComponentStyles(tree);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.treeForStyles" id="apidoc.element.ember-component-css.treeForStyles">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>treeForStyles
+        <span class="apidocSignatureSpan">(tree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForStyles = function (tree) {
+  if (!this._isAddon()) {
+    tree = this.processComponentStyles(tree);
+  }
+  return this._super.treeForStyles.call(this, tree);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-component-css.component_names" id="apidoc.module.ember-component-css.component_names">module ember-component-css.component_names</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.component_names.class" id="apidoc.element.ember-component-css.component_names.class">
+        function <span class="apidocSignatureSpan">ember-component-css.component_names.</span>class
+        <span class="apidocSignatureSpan">(modifiedPath, classicStyleDir, terseClassNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class = function (modifiedPath, classicStyleDir, terseClassNames) {
+  var seperator = '__';
+  var componentPath = this.path(modifiedPath, classicStyleDir);
+  var className = seperator + md5(componentPath).slice(-5);
+
+  if (!terseClassNames) {
+    className = seperator + componentPath.replace(/\//g, seperator) + className;
+  }
+
+  return className;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.extensions = options.extensions;
+this.classicStyleDir = options.classicStyleDir;
+this.terseClassNames = options.terseClassNames;
+}
+
+PodStyles.prototype.processString = function(contents, stylePath) {
+var extension = path.extname(stylePath),
+    className = componentNames.<span class="apidocCodeKeywordSpan">class</span>(stylePath, this.classicStyleDir, this.terseClassNames
+),
+    strategy = 'default';
+
+switch (extension) {
+  case '.styl':
+  case '.sass':
+    strategy = 'indentation';
+    break;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.component_names.path" id="apidoc.element.ember-component-css.component_names.path">
+        function <span class="apidocSignatureSpan">ember-component-css.component_names.</span>path
+        <span class="apidocSignatureSpan">(actualPath, classicStyleDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">path = function (actualPath, classicStyleDir) {
+  var terminator = '/';
+  var pathSegementToRemove = 'components/';
+
+  if (actualPath.includes(classicStyleDir)) {
+    terminator = '.';
+    pathSegementToRemove = 'styles/' + classicStyleDir + '/';
+  }
+
+  return actualPath.substr(0, actualPath.lastIndexOf(terminator)).replace(pathSegementToRemove, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+return actualPath.substr(0, actualPath.lastIndexOf(terminator)).replace(pathSegementToRemove, '');
+  },
+
+  class: function(modifiedPath, classicStyleDir, terseClassNames) {
+var seperator = '__';
+var componentPath = this.<span class="apidocCodeKeywordSpan">path</span>(modifiedPath, classicStyleDir);
+var className = seperator + md5(componentPath).slice(-5);
+
+if (!terseClassNames) {
+  className = seperator + componentPath.replace(/\//g, seperator) + className;
+}
+
+return className;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-component-css.pod_style" id="apidoc.module.ember-component-css.pod_style">module ember-component-css.pod_style</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.pod_style.pod_style" id="apidoc.element.ember-component-css.pod_style.pod_style">
+        function <span class="apidocSignatureSpan">ember-component-css.</span>pod_style
+        <span class="apidocSignatureSpan">(inputTree, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PodStyles(inputTree, options) {
+  options = options || {};
+  Filter.call(this, inputTree, {
+    annotation: options.annotation
+  });
+  this.extensions = options.extensions;
+  this.classicStyleDir = options.classicStyleDir;
+  this.terseClassNames = options.terseClassNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-component-css.pod_style.prototype" id="apidoc.module.ember-component-css.pod_style.prototype">module ember-component-css.pod_style.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.pod_style.prototype.constructor" id="apidoc.element.ember-component-css.pod_style.prototype.constructor">
+        function <span class="apidocSignatureSpan">ember-component-css.pod_style.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(inputTree, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PodStyles(inputTree, options) {
+  options = options || {};
+  Filter.call(this, inputTree, {
+    annotation: options.annotation
+  });
+  this.extensions = options.extensions;
+  this.classicStyleDir = options.classicStyleDir;
+  this.terseClassNames = options.terseClassNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.pod_style.prototype.processString" id="apidoc.element.ember-component-css.pod_style.prototype.processString">
+        function <span class="apidocSignatureSpan">ember-component-css.pod_style.prototype.</span>processString
+        <span class="apidocSignatureSpan">(contents, stylePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processString = function (contents, stylePath) {
+  var extension = path.extname(stylePath),
+      className = componentNames.class(stylePath, this.classicStyleDir, this.terseClassNames),
+      strategy = 'default';
+
+  switch (extension) {
+    case '.styl':
+    case '.sass':
+      strategy = 'indentation';
+      break;
+    case '.less':
+    case '.scss':
+      strategy = 'syntax';
+      break;
+  }
+
+  return processStratagies[strategy](contents, className, extension);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-component-css.preprocess_class_names" id="apidoc.module.ember-component-css.preprocess_class_names">module ember-component-css.preprocess_class_names</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.preprocess_class_names.default" id="apidoc.element.ember-component-css.preprocess_class_names.default">
+        function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>default
+        <span class="apidocSignatureSpan">(contents, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (contents, className) {
+  return postcss().use(namespaceSelectors(className)).process(contents).css;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.preprocess_class_names.indentation" id="apidoc.element.ember-component-css.preprocess_class_names.indentation">
+        function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>indentation
+        <span class="apidocSignatureSpan">(contents, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">indentation = function (contents, className) {
+  contents = contents.replace(/:--component/g, '&amp;');
+  contents = '.' + className + os.EOL + contents;
+
+  // Indent styles for scoping and make sure it ends with a
+  // newline that is not indented
+  return contents.replace(new RegExp(os.EOL, 'g'), os.EOL + '  ') + os.EOL;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.preprocess_class_names.syntax" id="apidoc.element.ember-component-css.preprocess_class_names.syntax">
+        function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>syntax
+        <span class="apidocSignatureSpan">(contents, className, extension)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">syntax = function (contents, className, extension) {
+  return postcss().use(namespaceSelectors(className))
+    .process(contents, {
+      syntax: supportedExtensions[extension]
+    }).css;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-component-css.preprocess_class_names.wrap" id="apidoc.element.ember-component-css.preprocess_class_names.wrap">
+        function <span class="apidocSignatureSpan">ember-component-css.preprocess_class_names.</span>wrap
+        <span class="apidocSignatureSpan">(contents, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrap = function (contents, className) {
+  // Replace instances of :--component with '&amp;'
+  contents = contents.replace(/:--component/g, '&amp;');
+
+  // Wrap the styles inside the generated class
+  return '.' + className + '{' + contents + '}';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
